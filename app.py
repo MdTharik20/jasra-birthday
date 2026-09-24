@@ -161,7 +161,7 @@ elif st.session_state.surprise_stage == 3:
     arr_days = td_arrival.days
     arr_hours = td_arrival.seconds // 3600
     
-    vid_path = "images/anime_message.mp4"
+    vid_path = "anime_message.mp4"
     if os.path.exists(vid_path):
         st.video(vid_path)
 
@@ -231,7 +231,7 @@ st.divider()
 st.header("The Birthday Girl 📸")
 st.markdown("<p style='text-align: center; color: #b5556b;'>Hover over the photos to see them come to life.</p>", unsafe_allow_html=True)
 
-img_dir = "images"
+img_dir = "."
 if os.path.exists(img_dir):
     valid_extensions = [".jpg", ".jpeg", ".png", ".webp"]
     image_files = [f for f in os.listdir(img_dir) if any(f.lower().endswith(ext) for ext in valid_extensions)]
